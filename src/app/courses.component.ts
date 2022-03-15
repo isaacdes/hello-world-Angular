@@ -56,11 +56,13 @@ import { FormsModule } from '@angular/forms'
         <i class="bi bi-star"></i>
         <span class="bi bi-star"></span>
         <span class="glyphicon glyphicon-star"></span>
+        `,
 
-       
-
-
-        `
+        styles: [
+            `
+            
+            `
+        ]
 })
 
 export class CoursesComponent {

@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
 import { StarComponent } from './star/star.component';
+import { PanelComponent } from './panel/panel.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { StarComponent } from './star/star.component';
     CoursesComponent,
     CourseComponent,
     SummaryPipe,
-    StarComponent
+    StarComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 <h3>Star</h3>
 <button 
 class="btn btn-large"
-[class.btn-primary]="isStar"
-[class.btn-secondary]="!isStar"
+[class.btn-primary]="isSelected"
+[class.btn-secondary]="!isSelected"
 (click)="onClick()">Click to toggle</button>
+

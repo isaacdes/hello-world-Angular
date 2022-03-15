@@ -1,19 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+// import { ViewEncapsulation } from '@angular/compiler';
+import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
+
+// import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-star',
   templateUrl: './star.component.html',
   styleUrls: ['./star.component.css']
+  // inputs: [isStar] //not working
+
+
+  // encapsulation: ViewEncapsulation.Emulated 
 })
-export class StarComponent implements OnInit {
+export class StarComponent  {
 
-  isStar : boolean | undefined;
-  constructor() { }
+  @Input('is-isStar') isSelected : boolean | undefined;
+  @Output('change') click = new EventEmitter();
 
-  ngOnInit(): void {
-  }
-
+  
   onClick() {
-    this.isStar = !this.isStar;
+    this.isSelected = !this.isSelected;
+    // this.click.emit(this.isSelected);
+
+    this.click.emit({newValue: this.isSelected});
   }
+
+  
+}
+
+export interface StarCahngedEventArgs {
+  newValue : boolean
 }

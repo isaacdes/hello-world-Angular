@@ -1,4 +1,20 @@
 <h1>Angular</h1>
-<courses></courses>
+<!-- <courses></courses>
 <app-course></app-course>
-<app-star></app-star>
+<app-star></app-star> -->
+
+
+<!-- Input properties
+post is taken from app.componenets.ts -->
+
+<!-- <app-star [is-isStar]="post.isStar" (change)="onStarChanged($event)" ></app-star>   -->
+<!-- Star has been changed:  true(output in console) -->
+
+<!-- <app-star [is-isStar]="post.isStar" (change)="onStarChanged($event)" ></app-star>  -->
+
+<app-panel >
+    <ng-container class="heading">Heading</ng-container>
+    <div class="body">
+        <h2>Body</h2>
+    </div>
+</app-panel>
