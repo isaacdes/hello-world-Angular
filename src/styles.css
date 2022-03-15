@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+    padding: 20px;
+}
+
+button {
+    margin: 20px;
+}
+
+.onclick {
+    
+    margin: 2%;
+}
+
+input {
+
+    margin: 1%;
+}
+
+i{
+    background-color: black;
+    color: red;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    border-radius: 80%;
+}
