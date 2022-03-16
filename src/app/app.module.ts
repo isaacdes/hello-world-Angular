@@ -10,6 +10,7 @@ import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
 import { StarComponent } from './star/star.component';
 import { PanelComponent } from './panel/panel.component';
+import { LikeCompoenentComponent } from './like-compoenent/like-compoenent.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PanelComponent } from './panel/panel.component';
     CourseComponent,
     SummaryPipe,
     StarComponent,
-    PanelComponent
+    PanelComponent,
+    LikeCompoenentComponent
   ],
   imports: [
     BrowserModule,

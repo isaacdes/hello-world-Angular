@@ -19,4 +19,10 @@ export class AppComponent {
     // Star has been changed:  true (output)
   }
 
+  tweet = {
+    body: "Tweet Like",
+    isLiked: false,
+    likesCount: 0
+  }
+
 }

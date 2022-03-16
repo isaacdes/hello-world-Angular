@@ -12,9 +12,16 @@ post is taken from app.componenets.ts -->
 
 <!-- <app-star [is-isStar]="post.isStar" (change)="onStarChanged($event)" ></app-star>  -->
 
-<app-panel >
+<!-- <app-panel >
     <ng-container class="heading">Heading</ng-container>
     <div class="body">
         <h2>Body</h2>
     </div>
-</app-panel>
+</app-panel> -->
+
+<!-- Module 5 Assignment, Like Compoenent -->
+<app-like-compoenent
+    [likesCount]="tweet.likesCount"
+    [isActive]="tweet.isLiked"
+> </app-like-compoenent>
+
