@@ -12,6 +12,7 @@ import { StarComponent } from './star/star.component';
 import { PanelComponent } from './panel/panel.component';
 import { LikeCompoenentComponent } from './like-compoenent/like-compoenent.component';
 import { InputFormatDirective } from './input-format.directive';
+import { ZippyComponent } from './zippy/zippy.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { InputFormatDirective } from './input-format.directive';
     StarComponent,
     PanelComponent,
     LikeCompoenentComponent,
-    InputFormatDirective
+    InputFormatDirective,
+    ZippyComponent
   ],
   imports: [
     BrowserModule,

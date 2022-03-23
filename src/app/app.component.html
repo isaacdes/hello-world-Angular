@@ -39,7 +39,7 @@ post is taken from app.componenets.ts -->
 <ng-template #noCourses>
   No Courses Yet
 </ng-template> -->
-
+<!-- 
 <div [hidden]="courses.length == 0">
   List of Courses
   <ul>
@@ -62,26 +62,27 @@ post is taken from app.componenets.ts -->
   <div *ngSwitchCase="'map'">Map View Content</div>
   <div *ngSwitchCase="'list'">List View Content</div>
   <div *ngSwitchDefault>Otherwise</div>
-</div>
+</div> -->
+
 <!-- ngFor and Change Detection -->
-<button (click)="onAdd()">Add</button>
+<!-- <button (click)="onAdd()">Add</button>
 <ul>
   <li *ngFor="let course of courses; even as isEven">
      {{course.name}}<span *ngIf="isEven"> (Even) </span>
      <button (click)="onRemove(course)" >Remove</button>
   </li>
 </ul>
-<br>
+<br> -->
 
 <!-- ngFor and Trackby -->
-<button (click)="loadCourses()" >Load Courses</button>
+<!-- <button (click)="loadCourses()" >Load Courses</button>
 <ul>
   <li *ngFor="let course of course2; trackBy: trackCourse">
     {{course.name}}
   </li>
-</ul>
+</ul> -->
 
-
+<!-- 
 <div *ngIf="courses.length > 0; else noCourses">
   List of Courses
 </div>
@@ -89,7 +90,7 @@ post is taken from app.componenets.ts -->
   No Courses
 </ng-template>
 
-<app-star></app-star>
+<app-star></app-star> -->
 
 <!-- <button
 [style.backgroundColor]="canSave ? 'blue':'grey'"
@@ -100,7 +101,7 @@ post is taken from app.componenets.ts -->
 
   Save
 </button> -->
-
+<!-- 
 <button
 
 [ngStyle]="{
@@ -112,10 +113,18 @@ post is taken from app.componenets.ts -->
 >
 
   Save
-</button>
+</button> -->
 
 <!-- Safe Travesal Operator -->
-<span >{{task?.assignee}}</span>
+<!-- <span >{{task?.assignee}}</span> -->
 
 <!-- Custom directives -->
-<input type="text" [appInputFormat]="'uppercase'" />
+<!-- <input type="text" [appInputFormat]="'uppercase'" /> -->
+
+<!-- Zippy Component -->
+<app-zippy title="Shipping Details">
+  Shipping Details Content
+</app-zippy>
+<app-zippy title="Billing Details">
+  Billing Details Content
+</app-zippy>
