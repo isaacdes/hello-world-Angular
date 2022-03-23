@@ -11,6 +11,7 @@ import { CourseComponent } from './course/course.component';
 import { StarComponent } from './star/star.component';
 import { PanelComponent } from './panel/panel.component';
 import { LikeCompoenentComponent } from './like-compoenent/like-compoenent.component';
+import { InputFormatDirective } from './input-format.directive';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { LikeCompoenentComponent } from './like-compoenent/like-compoenent.compo
     SummaryPipe,
     StarComponent,
     PanelComponent,
-    LikeCompoenentComponent
+    LikeCompoenentComponent,
+    InputFormatDirective
   ],
   imports: [
     BrowserModule,

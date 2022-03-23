@@ -20,8 +20,102 @@ post is taken from app.componenets.ts -->
 </app-panel> -->
 
 <!-- Module 5 Assignment, Like Compoenent -->
-<app-like-compoenent
+<!-- <app-like-compoenent
     [likesCount]="tweet.likesCount"
     [isActive]="tweet.isLiked"
-> </app-like-compoenent>
+> </app-like-compoenent> -->
 
+<!-- Module 6 Directives -->
+
+<!-- <div *ngIf="courses.length >0 then coursesList else noCourses"></div>
+<ng-template #coursesList>
+  List of Courses
+  <ul>
+    <li *ngFor="let i of courses">
+      {{i}}
+    </li>
+  </ul>
+</ng-template>
+<ng-template #noCourses>
+  No Courses Yet
+</ng-template> -->
+
+<div [hidden]="courses.length == 0">
+  List of Courses
+  <ul>
+    <li *ngFor="let i of courses">
+      {{i.id}}
+    </li>
+  </ul>
+</div>
+
+<div [hidden]="courses.length > 0">
+  No Courses Yet
+</div>
+
+<div (click)="viewMode='Something Else'" >Otherwise</div>
+<ul class="nav nav-pills">
+  <li class="nav-item" [class.active]="viewMode == 'map'" ><a class="nav-link" (click)="viewMode = 'map'" >Map View</a></li>
+  <li class="nav-item" [class.active]="viewMode == 'list'"><a class="nav-link" (click)="viewMode = 'list'" >List View</a></li>
+</ul>
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'map'">Map View Content</div>
+  <div *ngSwitchCase="'list'">List View Content</div>
+  <div *ngSwitchDefault>Otherwise</div>
+</div>
+<!-- ngFor and Change Detection -->
+<button (click)="onAdd()">Add</button>
+<ul>
+  <li *ngFor="let course of courses; even as isEven">
+     {{course.name}}<span *ngIf="isEven"> (Even) </span>
+     <button (click)="onRemove(course)" >Remove</button>
+  </li>
+</ul>
+<br>
+
+<!-- ngFor and Trackby -->
+<button (click)="loadCourses()" >Load Courses</button>
+<ul>
+  <li *ngFor="let course of course2; trackBy: trackCourse">
+    {{course.name}}
+  </li>
+</ul>
+
+
+<div *ngIf="courses.length > 0; else noCourses">
+  List of Courses
+</div>
+<ng-template #noCourses>
+  No Courses
+</ng-template>
+
+<app-star></app-star>
+
+<!-- <button
+[style.backgroundColor]="canSave ? 'blue':'grey'"
+[style.color]="canSave ? 'white':'black'"
+[style.fontWeight]="canSave? 'bold':'normal'"
+(click)="onClickBtn()"
+>
+
+  Save
+</button> -->
+
+<button
+
+[ngStyle]="{
+  'backgroundColor':canSave ? 'blue':'grey',
+  'color':canSave ? 'white':'black',
+  'fontWeight':canSave? 'bold':'normal'
+}"
+(click)="onClickBtn()"
+>
+
+  Save
+</button>
+
+<!-- Safe Travesal Operator -->
+<span >{{task?.assignee}}</span>
+
+<!-- Custom directives -->
+<input type="text" [appInputFormat]="'uppercase'" />
