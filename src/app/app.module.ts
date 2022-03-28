@@ -13,6 +13,7 @@ import { PanelComponent } from './panel/panel.component';
 import { LikeCompoenentComponent } from './like-compoenent/like-compoenent.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ZippyComponent } from './zippy/zippy.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ZippyComponent } from './zippy/zippy.component';
     PanelComponent,
     LikeCompoenentComponent,
     InputFormatDirective,
-    ZippyComponent
+    ZippyComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
